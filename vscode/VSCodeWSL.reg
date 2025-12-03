@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCodeWSL]
+@="Open with Code (WSL)"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+[HKEY_CLASSES_ROOT\Directory\shell\VSCodeWSL\command]
+@="wsl.exe bash -lc \"code \\\"$(wslpath -au '%1')\\\"\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCodeWSL]
+@="Open with Code (WSL)"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCodeWSL\command]
+@="wsl.exe bash -lc \"code \\\"$(wslpath -au '%V')\\\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\VSCodeWSL]
+@="Open with Code (WSL)"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+[HKEY_CLASSES_ROOT\*\shell\VSCodeWSL\command]
+@="wsl.exe bash -lc \"code \\\"$(wslpath -au '%1')\\\"\""

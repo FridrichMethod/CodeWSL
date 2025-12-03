@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\CursorWSLUbuntu]
+@="Open with Cursor (Ubuntu)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\Directory\shell\CursorWSLUbuntu\command]
+@="wsl.exe -d Ubuntu bash -lc \"cursor \\\"$(wslpath -au '%1')\\\"\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CursorWSLUbuntu]
+@="Open with Cursor (Ubuntu)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CursorWSLUbuntu\command]
+@="wsl.exe -d Ubuntu bash -lc \"cursor \\\"$(wslpath -au '%V')\\\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\CursorWSLUbuntu]
+@="Open with Cursor (Ubuntu)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\*\shell\CursorWSLUbuntu\command]
+@="wsl.exe -d Ubuntu bash -lc \"cursor \\\"$(wslpath -au '%1')\\\"\""

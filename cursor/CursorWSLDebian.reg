@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\CursorWSLDebian]
+@="Open with Cursor (Debian)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\Directory\shell\CursorWSLDebian\command]
+@="wsl.exe -d Debian bash -lc \"cursor \\\"$(wslpath -au '%1')\\\"\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CursorWSLDebian]
+@="Open with Cursor (Debian)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CursorWSLDebian\command]
+@="wsl.exe -d Debian bash -lc \"cursor \\\"$(wslpath -au '%V')\\\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\CursorWSLDebian]
+@="Open with Cursor (Debian)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\*\shell\CursorWSLDebian\command]
+@="wsl.exe -d Debian bash -lc \"cursor \\\"$(wslpath -au '%1')\\\"\""

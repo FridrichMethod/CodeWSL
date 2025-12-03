@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\VSCodeWSLDebian]
+@="Open with Code (Debian)"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+[HKEY_CLASSES_ROOT\Directory\shell\VSCodeWSLDebian\command]
+@="wsl.exe -d Debian bash -lc \"code \\\"$(wslpath -au '%1')\\\"\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCodeWSLDebian]
+@="Open with Code (Debian)"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\VSCodeWSLDebian\command]
+@="wsl.exe -d Debian bash -lc \"code \\\"$(wslpath -au '%V')\\\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\VSCodeWSLDebian]
+@="Open with Code (Debian)"
+"Icon"="%USERPROFILE%\\AppData\\Local\\Programs\\Microsoft VS Code\\Code.exe"
+[HKEY_CLASSES_ROOT\*\shell\VSCodeWSLDebian\command]
+@="wsl.exe -d Debian bash -lc \"code \\\"$(wslpath -au '%1')\\\"\""

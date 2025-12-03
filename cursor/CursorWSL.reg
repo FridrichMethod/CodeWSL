@@ -1,0 +1,19 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\shell\CursorWSL]
+@="Open with Cursor (WSL)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\Directory\shell\CursorWSL\command]
+@="wsl.exe bash -lc \"cursor \\\"$(wslpath -au '%1')\\\"\""
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CursorWSL]
+@="Open with Cursor (WSL)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\Directory\Background\shell\CursorWSL\command]
+@="wsl.exe bash -lc \"cursor \\\"$(wslpath -au '%V')\\\"\""
+
+[HKEY_CLASSES_ROOT\*\shell\CursorWSL]
+@="Open with Cursor (WSL)"
+"Icon"="C:\\Program Files\\cursor\\Cursor.exe"
+[HKEY_CLASSES_ROOT\*\shell\CursorWSL\command]
+@="wsl.exe bash -lc \"cursor \\\"$(wslpath -au '%1')\\\"\""
